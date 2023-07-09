@@ -12,31 +12,36 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__inner">
-      <div class="header-utilities">
-        <a class="header__logo" href="/">
-          Attendance Management
-        </a>
-        <nav>
-          <ul class="header-nav">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="/mypage">マイページ</a>
+  <div class="homepage">
+    <header>
+      <div class="header__inner">
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        </div>
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="/">Home</a>
             </li>
-            <li class="header-nav__item">
-              <form>
-                <button class="header-nav__button">ログアウト</button>
-              </form>
+            <li>
+              <a href="/register">Registration</a>
+            </li>
+            <li>
+              <a href="/login">Login</a>
             </li>
           </ul>
-        </nav>
+        </div>
+        <h2 class="header__logo">
+          Rese
+        </h2>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    @yield('content')
-  </main>
+    <main>
+      @yield('content')
+    </main>
+  </div>
 </body>
 
 </html>
