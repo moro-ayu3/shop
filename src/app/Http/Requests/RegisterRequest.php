@@ -26,7 +26,7 @@ class RegusterRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:191'],
             'email' => ['required', 'string', 'email', 'max:191', 'unique:users,email'],
-            'password' => ['required', 'min:8', 'max:191', Rules\Password::defaults()],
+            'password' => ['required', 'min:8', 'max:191'],
         ];
     }
 

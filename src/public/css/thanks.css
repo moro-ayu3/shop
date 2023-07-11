@@ -1,0 +1,26 @@
+.register__card {
+  margin: 0 auto;
+  padding: 30px 15px;
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 5px 5px 3px #a9a9a9;
+  cursor: pointer;
+  max-width: 1230px;
+}
+
+.form__button {
+  margin-top: 20px;
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 30%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
