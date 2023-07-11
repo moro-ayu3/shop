@@ -45,9 +45,14 @@
 .form__group-icon {
   text-align: left;
   margin-top: 5px;
-  margin-left: -40px;
+  margin-left: -60px;
+  display: flex;
 }
 
+img.icon150010_256.png {
+  width: 10%;
+  height: 15px;
+}
 
 .form__error {
   height: 20px;
@@ -56,6 +61,7 @@
 }
 
 .form__input--text {
+  display: flex;
   margin-top: -20px;
 }
 

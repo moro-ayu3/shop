@@ -14,8 +14,7 @@
       @csrf
       <div class="form__group">
         <div class="form__group-icon">
-          <a href="./img src=icon150010_256.png">
-          <img src="icon150010_256.png" alt=""></a>
+          <img src="/img/icon_150010_256.png" alt="name" width="20" height="20">
         </div>
         <div class="form__group-content">
           <div class="form__input--text">
@@ -30,7 +29,7 @@
       </div>
       <div class="form__group">
         <div class="form__group-icon">
-          <span class="form__label--item"></span>
+          <img src="/img/icon_112180_256.png" alt="email" width="20" height="20">
         </div>
         <div class="form__group-content">
           <div class="form__input--text">
@@ -45,7 +44,7 @@
       </div>
       <div class="form__group">
         <div class="form__group-icon">
-          <img src="img/simpleicon.svg">
+          <img src="/img/icon_000140_256.png" alt="password" width="20" height="20">
         </div>
         <div class="form__group-content">
           <div class="form__input--text">
