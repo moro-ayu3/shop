@@ -13,12 +13,11 @@
 
 <body>
   <div class="homepage">
-    <header>
-      <div class="header__inner">
-        <div class="hamburger-menu">
-          <input type="checkbox" id="menu-btn-check">
-          <label for="menu-btn-check" class="menu-btn"><span></span></label>
-          <div class="menu-content">
+    <header class="header__inner">
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <div class="menu-content">
           <ul>
             <li>
               <a href="/">Home</a>
@@ -32,10 +31,11 @@
           </ul>
         </div>
         </div>
-        <h2 class="header__logo">
-          Rese
-        </h2>
-      </div>
+        <div class="header__title">
+          <h2 class="header__logo">
+            Rese
+          </h2>
+        </div>
     </header>
 
     <main>

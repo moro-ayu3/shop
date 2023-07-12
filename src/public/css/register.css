@@ -72,6 +72,19 @@ img.icon150010_256.png {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.form__input--text input::before {
+  content: "";
+  position: absolute;
+  background: url(../img/icon_150010_256.png);
+  background-size: cover;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
+  display: inline-block;
 }
 
 .form__button {
