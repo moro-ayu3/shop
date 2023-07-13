@@ -5,6 +5,17 @@
 @endsection
 
 @section('content')
+<form class="form" action="/all/search" method="get">
+  <div class="search">
+    <div class="search-content">
+      <select name="area_id">All area
+        @foreach($categories as $category)
+          <option value="{{ $category->id }}">{{ $category->area_name }}</option>
+        @endforeach
+      </select>
+    </div>
+  </div>
+</form>
 <div class="wrapper">
   <div class="card">
     <div class="content-img">
