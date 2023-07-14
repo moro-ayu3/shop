@@ -32,6 +32,6 @@ class ShopController extends Controller
     {
         $shop = Shop::find($id);
 
-        return view('/detail/:shop_id', ['shop' => $shop]);
+        return view('detail', ['shop' => $shop]);
     }
 }

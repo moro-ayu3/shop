@@ -73,11 +73,11 @@
   width: 90px;
   height: 40px;
   border: none;
+  text-decoration: none;
   border-radius: 3px;
   background: blue;
   color: #fff;
   cursor: pointer;
-  d
 }
 
 .heart {

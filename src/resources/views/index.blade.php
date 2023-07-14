@@ -34,7 +34,9 @@
       <p class="tag">#東京都 #寿司</p>
     </div>
     <div class="detail">
+      @foreach($shops as $shop)
       <button class="detail__button"><a href="/all/{{ $shop->id }}">詳しく見る</a></button>
+      @endforeach
     </div>
     <div class="heart">
       <a href="./img/icon8-heart-50.png">
