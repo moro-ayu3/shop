@@ -1,3 +1,23 @@
+.search {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+.search__content {
+  padding: 0px;
+  width: 500px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #e9eaea;
+  background-color: #fff;
+  box-shadow: 5px 5px 3px #a9a9a9;
+}
+
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -56,7 +76,8 @@
   border-radius: 3px;
   background: blue;
   color: #fff;
-  cursor: pointer;d
+  cursor: pointer;
+  d
 }
 
 .heart {

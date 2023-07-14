@@ -7,12 +7,20 @@
 @section('content')
 <form class="form" action="/all/search" method="get">
   <div class="search">
-    <div class="search-content">
-      <select name="area_id">All area
-        @foreach($categories as $category)
-          <option value="{{ $category->id }}">{{ $category->area_name }}</option>
+    <div class="search__content">
+      <select name="area_id" class="area">
+        <option value="">All area</option>
+        @foreach($areas as $area)
+          <option value="{{ $area->id }}">{{ $area->name }}</option>
         @endforeach
       </select>
+      <select name="genre_id" class="genre">
+        <option value="">All genre</option>
+        @foreach($genres as $genre)
+          <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+        @endforeach
+      </select>
+      <input class="search_shop" type="text" name="keyword" id="keyword" placeholder="Search ..."/>
     </div>
   </div>
 </form>
@@ -26,7 +34,7 @@
       <p class="tag">#東京都 #寿司</p>
     </div>
     <div class="detail">
-      <button class="detail__button">詳しく見る</button>
+      <button class="detail__button"><a href="/all/{{ $shop->id }}">詳しく見る</a></button>
     </div>
     <div class="heart">
       <a href="./img/icon8-heart-50.png">
@@ -327,4 +335,24 @@
     </div>
   </div>
 </div>
+
+@if(!empty($shops))
+ @foreach($shops as $shop)
+  <div class="card">
+    <div class="content-img">
+      <img src=""/>
+    </div>
+    <div class="text-box">
+      <h3 class="title">{{ $shop->shop_name }}</h3>
+      <p class="tag">#{{ $shop->area->name }}#{{ $shop->genre->name }}</p>
+    </div>
+    <div class="detail">
+      <button class="detail__button">詳しく見る</button>
+    </div>
+    <div class="heart">
+      <div class="heart__icon"></div>
+    </div>
+  </div>
+  @endforeach
+@endif
 @endsection

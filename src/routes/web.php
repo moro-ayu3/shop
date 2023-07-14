@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 Route::get('/', [ShopController::class, 'index']);
 Route::get('/all/search', [ShopController::class, 'search']);
+Route::get('/all/{id}', [ShopController::class, 'showDetail']);
 
 Route::middleware('auth')->group(function () {
    Route::get('/mypage', [MypageController::class, 'index']);
