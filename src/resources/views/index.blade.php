@@ -39,8 +39,7 @@
       @endforeach
     </div>
     <div class="heart">
-      <a href="./img/icon8-heart-50.png">
-      <img src="./img/icon8-heart-50.png" alt="heart" width="20" height="20"></a>
+      <img src="./img/icon8-heart-50.png" alt="heart" width="20" height="20">
     </div>
   </div>
   <div class="card">
@@ -342,7 +341,7 @@
  @foreach($shops as $shop)
   <div class="card">
     <div class="content-img">
-      <img src=""/>
+      <img src="{{ $shop->shop_img }}">
     </div>
     <div class="text-box">
       <h3 class="title">{{ $shop->shop_name }}</h3>
