@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -11,16 +12,19 @@
       <select name="area_id" class="area">
         <option value="">All area</option>
         @foreach($areas as $area)
-          <option value="{{ $area->id }}">{{ $area->name }}</option>
+          <option value="{{ $area->id }}" class="search_area">{{ $area->name }}</option>
         @endforeach
       </select>
       <select name="genre_id" class="genre">
         <option value="">All genre</option>
         @foreach($genres as $genre)
-          <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+          <option value="{{ $genre->id }}" class="search_genre">{{ $genre->name }}</option>
         @endforeach
       </select>
-      <input class="search_shop" type="text" name="keyword" id="keyword" placeholder="Search ..."/>
+      <button type="submit" aria-label="検索" class="search__button"></button>
+      <div class="search__shop">
+        <input class="search_shop" type="text" name="keyword" id="keyword" placeholder="Search ..."/>
+      </div>
     </div>
   </div>
 </form>
@@ -38,9 +42,7 @@
       <button class="detail__button"><a href="/all/{{ $shop->id }}">詳しく見る</a></button>
       @endforeach
     </div>
-    <div class="heart">
-      <img src="./img/icon8-heart-50.png" alt="heart" width="20" height="20">
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -53,9 +55,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"><i class="fa-regular fa-heart" style="color: #666f7f;"></i></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -68,9 +68,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -83,9 +81,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
 </div>
 <div class="wrapper">
@@ -100,9 +96,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -115,9 +109,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -130,9 +122,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -145,9 +135,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
 </div>
 <div class="wrapper">
@@ -162,9 +150,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -177,9 +163,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -192,9 +176,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -207,9 +189,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
 </div>
 <div class="wrapper">
@@ -224,9 +204,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -239,9 +217,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -254,9 +230,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -269,9 +243,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
 </div>
 <div class="wrapper">
@@ -286,9 +258,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -301,9 +271,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -316,9 +284,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   <div class="card">
     <div class="content-img">
@@ -331,9 +297,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
 </div>
 
@@ -350,9 +314,7 @@
     <div class="detail">
       <button class="detail__button">詳しく見る</button>
     </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
-    </div>
+    <button class="heart"></button>
   </div>
   @endforeach
 @endif

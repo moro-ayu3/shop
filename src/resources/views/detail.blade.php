@@ -8,7 +8,7 @@
 @foreach($shops as $shop)
 <div class="shop__detail">
   <div class="shop__title">
-    <div class="return"><button class="return__button"><</button></div>
+    <div class="return"><button class="return__button"><a href="/"><</a></button></div>
     <h3 class="shop__name">{{ $shop->shop_name }}</h3>
   </div>
   <div class="content-img">
@@ -24,7 +24,11 @@
 </div>
 @endforeach
 <div class="reserve">
-  <form class="form" action="/detail/:shop_id/reserve" method="post">
+  <div class="reserve__form">
+    <div class="reserve__title">
+      <p class="reserve__title-1">予約</p>
+    </div>
+    <form class="form" action="/detail/:shop_id/reserve" method="post">
       <input type="date" name="date" id="date" class="date"/>
       <input type="time" name="time" id="time" class="time">
       <select name="reserve_id" class="number">
@@ -32,33 +36,32 @@
           <option value="{{ $reserve->id }}">{{ $reserve->number }}人</option>
         @endforeach
       </select>
-  </form>
-  @foreach($reserves as $reserve)
-  <div class="reserve__list">
-    <div class="text-box">
-      <p class="title">Shop</p>
-      @foreach($shops as $shop)
-      <p class="shop_name">{{ $shop->shop_name }}</p>
-      @endforeach
+    </form>
+    @foreach($reserves as $reserve)
+    <div class="reserve__list">
+      <div class="text-box">
+        <p class="title">Shop</p>
+        @foreach($shops as $shop)
+        <p class="shop_name">{{ $shop->shop_name }}</p>
+        @endforeach
+      </div>
+      <div class="text-box">
+        <p class="title">Date</p>
+        <p class="date">{{ $reserve->date }}</p>
+      </div>
+      <div class="text-box">
+        <p class="title">Time</p>
+        <p class="time">{{ $reserve->time }}</p>
+      </div>
+      <div class="text_box">
+        <p class="title">Number</p>
+        <p class="number">{{ $reserve->number }}</p>
+      </div>
     </div>
-    <div class="text-box">
-      <p class="title">Time</p>
-    <div class="heart">
-      <a href="./img/icon8-heart-50.png">
-      <img src="./img/icon8-heart-50.png" alt="heart" width="20" height="20"></a>
-    </div>
-  <div class="card">
-    <div class="content-img">
-      <img src="./img/yakiniku.jpg" />
-    </div>
-    <div class="text-box">
-      <h3 class="title">牛助</h3>
-      <p class="tag">#大阪府 #焼肉</p>
-    </div>
-    <div class="detail">
-      <button class="detail__button">詳しく見る</button>
-    </div>
-    <div class="heart">
-      <div class="heart__icon"></div>
+    @endforeach
+    <div class="button">
+      <button class="reserve_button">予約する</button>
     </div>
   </div>
+</div>
+@endsection

@@ -11,6 +11,16 @@ class ShopDetailController extends Controller
     public function index()
     {
         $shops = Shop::all();
-        return view('index', ['shops' => $shops]);
+        $reserves = Reserve::all();
+        return view('index', ['shops' => $shops, 'reserves' => $reserves]);
+    }
+
+    public function create(Request $request)
+    {
+        $reserve = $request->only(['date', 'time', 'number']);
+
+        Reserve::create($reserve);
+
+        return view('done', ['reserve' => $reserve]);
     }
 }

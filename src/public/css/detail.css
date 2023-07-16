@@ -1,0 +1,84 @@
+.shop__detail {
+  margin: 0 auto;
+}
+
+.return__button {
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  border-radius: 3px;
+  box-shadow: 5px 5px 3px #a9a9a9;
+}
+
+.shop__name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.area_tag,
+.genre_tag,
+.shop_explain {
+  font-size: 15px;
+  color: #000;
+}
+
+.reserve {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.reserve__form {
+  width: 500px;
+  height: 800px;
+  color: #4169e1;
+  border-radius: 3px;
+  box-shadow: 5px 5px 3px #a9a9a9;
+}
+
+.reserve__title-1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.reserve__list {
+  margin: 0 auto;
+  width: 300px;
+  height: 100px;
+  color: #1e90ff;
+  border-radius: 3px;
+}
+
+.title,
+.shop_name,
+.date,
+.time,
+.number {
+  font-size: 15px;
+  color: #fff;
+}
+
+.button {
+  margin: 0 auto;
+  width: 500px;
+  height: 50px;
+  color: blue;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.reserve__button {
+  font-size: 20px;
+  color: #fff;
+}

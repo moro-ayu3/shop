@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   z-index: 90;
-  background-color: blue;
+  background-color:#4169e1 ;
 }
 
 .menu-btn span,
@@ -88,7 +88,7 @@
   width: 100%;
   font-size: 15px;
   box-sizing: border-box;
-  color: blue;
+  color: #4169e1;
   text-decoration: none;
   padding: 9px 15px 10px 0;
   position: relative;
@@ -107,7 +107,7 @@
 }
 
 .header__logo {
-  color: blue;
+  color: #4169e1;
   text-decoration: none;
   font-weight: bold;
   font-size: 24px;
