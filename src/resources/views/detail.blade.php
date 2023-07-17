@@ -41,21 +41,19 @@
     <div class="reserve__list">
       <div class="text-box">
         <p class="title">Shop</p>
-        @foreach($shops as $shop)
-        <p class="shop_name">{{ $shop->shop_name }}</p>
-        @endforeach
+        <p class="shop_name">{{ $reserve->shop->shop_name }}</p>
       </div>
       <div class="text-box">
         <p class="title">Date</p>
-        <p class="date">{{ $reserve->date }}</p>
+        <p class="reserve_date">{{ $reserve->date }}</p>
       </div>
       <div class="text-box">
         <p class="title">Time</p>
-        <p class="time">{{ $reserve->time }}</p>
+        <p class="reserve_time">{{ $reserve->time }}</p>
       </div>
       <div class="text_box">
         <p class="title">Number</p>
-        <p class="number">{{ $reserve->number }}</p>
+        <p class="reserve_number">{{ $reserve->number }}</p>
       </div>
     </div>
     @endforeach

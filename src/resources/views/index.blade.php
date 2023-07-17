@@ -39,7 +39,7 @@
     </div>
     <div class="detail">
       @foreach($shops as $shop)
-      <button class="detail__button"><a href="/all/{{ $shop->id }}">詳しく見る</a></button>
+      <button class="detail__button"><a href="/detail/:{{ $shop->id }}">詳しく見る</a></button>
       @endforeach
     </div>
     <button class="heart"></button>

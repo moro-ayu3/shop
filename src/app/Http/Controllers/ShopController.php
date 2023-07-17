@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
+use App\Models\Reserve;
 
 
 class ShopController extends Controller
@@ -31,7 +32,15 @@ class ShopController extends Controller
     public function showDetail($id)
     {
         $shop = Shop::find($id);
+        $shops = Shop::with('Reserve')->get();
+        $reserves = Reserve::all();
+        return view('detail', ['shop' => $shop, 'shops' => $shops, 'reserves' => $reserves]);
+    }
 
-        return view('detail', ['shop' => $shop]);
+    public function create(Request $request)
+    {
+        $reserve = $request->only(['date', 'time', 'number']);
+        Reserve::create($reserve);
+        return view('mypage', ['reserve' => $reserve]);
     }
 }

@@ -20,4 +20,9 @@ class Reserve extends Model
     {
         return $this->hasMany(Test::class);
     }
+
+    public function shop()
+    {
+        return $this->hasMany(Shop::class);
+    }
 }

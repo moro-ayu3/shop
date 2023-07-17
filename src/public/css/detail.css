@@ -1,23 +1,36 @@
 .shop__detail {
-  margin: 0 auto;
+  width: 400px;
+  height: 800px;
+}
+
+.shop__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
 }
 
 .return__button {
-  width: 50px;
+  width: 30px;
   height: 30px;
   background-color: #fff;
   font-size: 20px;
   text-align: center;
-  font-weight: bold;
-  color: #000;
+  border: none;
   border-radius: 3px;
   box-shadow: 5px 5px 3px #a9a9a9;
 }
 
 .shop__name {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: #000;
+  margin-left: 15px;
+}
+
+.content-img {
+  margin: 0 auto;
+  margin-left: 40px;
 }
 
 img {
@@ -25,10 +38,24 @@ img {
   height: auto;
 }
 
+.shop__tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.explain {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
 .area_tag,
 .genre_tag,
 .shop_explain {
-  font-size: 15px;
+  font-size: 13px;
   color: #000;
 }
 
@@ -36,18 +63,25 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: -100px;
 }
 
 .reserve__form {
-  width: 500px;
-  height: 800px;
-  color: #4169e1;
+  width: 400px;
+  height: 600px;
+  background-color: #4169e1;
   border-radius: 3px;
   box-shadow: 5px 5px 3px #a9a9a9;
 }
 
+.reserve__title {
+  margin-left: 15px;
+}
+
 .reserve__title-1 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
@@ -56,29 +90,53 @@ img {
   margin: 0 auto;
   width: 300px;
   height: 100px;
-  color: #1e90ff;
+  background-color: #1e90ff;
   border-radius: 3px;
+}
+
+.date,
+.time,
+.number {
+  display: block;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.date {
+  width: 150px;
+  height: 20px;
+}
+
+.time,
+.number {
+  width: 300px;
+  height: 20px;
 }
 
 .title,
 .shop_name,
-.date,
-.time,
-.number {
+.reserve_date,
+.reserve_time,
+.reserve_number {
   font-size: 15px;
   color: #fff;
 }
 
 .button {
   margin: 0 auto;
-  width: 500px;
+  width: 400px;
   height: 50px;
-  color: blue;
+  background-color: blue;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  margin-top: 400px;
 }
 
 .reserve__button {
+  margin: 0 auto;
   font-size: 20px;
+  border: none;
   color: #fff;
 }

@@ -25,6 +25,12 @@ class Shop extends Model
         return $this->BelongsTo(Genre::class);
     }
 
+    public function reserve()
+    {
+        return $this->BelongsTo(Reserve::class);
+    }
+    
+
     public function scopeAreaSearch($query, $area_id)
     {
        if (!empty($area_id)) {
