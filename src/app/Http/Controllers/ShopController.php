@@ -41,6 +41,6 @@ class ShopController extends Controller
     {
         $reserve = $request->only(['date', 'time', 'number']);
         Reserve::create($reserve);
-        return view('mypage', ['reserve' => $reserve]);
+        return view('done', ['reserve' => $reserve]);
     }
 }

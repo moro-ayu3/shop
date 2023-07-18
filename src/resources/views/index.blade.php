@@ -7,6 +7,7 @@
 
 @section('content')
 <form class="form" action="/all/search" method="get">
+  @csrf
   <div class="search">
     <div class="search__content">
       <select name="area_id" class="area">

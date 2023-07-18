@@ -29,6 +29,7 @@
       <p class="reserve__title-1">予約</p>
     </div>
     <form class="form" action="/detail/:shop_id/reserve" method="post">
+      @csrf
       <input type="date" name="date" id="date" class="date"/>
       <input type="time" name="time" id="time" class="time">
       <select name="reserve_id" class="number">
@@ -36,30 +37,30 @@
           <option value="{{ $reserve->id }}">{{ $reserve->number }}人</option>
         @endforeach
       </select>
+      @foreach($reserves as $reserve)
+      <div class="reserve__list">
+        <div class="text-box">
+          <p class="title">Shop</p>
+          <input class="shop_name" type="hidden" name="shop_name" value="{{ $reserve->shop->shop_name }}">
+        </div>
+        <div class="text-box">
+          <p class="title">Date</p>
+          <input class="reserve_date" type="hidden" name="reserve_date" value="{{ $reserve->date }}">
+        </div>
+        <div class="text-box">
+          <p class="title">Time</p>
+          <input class="reserve_time" type="hidden" name="reserve_time" value="{{ $reserve->time }}">
+        </div>
+        <div class="text_box">
+          <p class="title">Number</p>
+          <input class="reserve_number" type="hidden" name="reserve_number" value="{{ $reserve->number }}">
+        </div>
+      </div>
+      @endforeach
+      <div class="button">
+        <button class="reserve_button">予約する</button>
+      </div>
     </form>
-    @foreach($reserves as $reserve)
-    <div class="reserve__list">
-      <div class="text-box">
-        <p class="title">Shop</p>
-        <p class="shop_name">{{ $reserve->shop->shop_name }}</p>
-      </div>
-      <div class="text-box">
-        <p class="title">Date</p>
-        <p class="reserve_date">{{ $reserve->date }}</p>
-      </div>
-      <div class="text-box">
-        <p class="title">Time</p>
-        <p class="reserve_time">{{ $reserve->time }}</p>
-      </div>
-      <div class="text_box">
-        <p class="title">Number</p>
-        <p class="reserve_number">{{ $reserve->number }}</p>
-      </div>
-    </div>
-    @endforeach
-    <div class="button">
-      <button class="reserve_button">予約する</button>
-    </div>
   </div>
 </div>
 @endsection

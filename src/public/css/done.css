@@ -10,20 +10,20 @@
   max-width: 1230px;
 }
 
-.thanks__inner {
+.done__inner {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.thanks__message {
+.done__message {
   font-size: 30px;
   text-align: center;
 }
 
-.login__button {
+.return__button {
   padding: 10px 10px;
-  width: 70px;
+  width: 50px;
   height: 30px;
   border: none;
   border-radius: 3px;
