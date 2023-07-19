@@ -16,6 +16,7 @@ Route::get('/detail/:{shop_id}', [ShopController::class, 'showDetail']);
 
 Route::middleware('auth')->group(function () {
    Route::get('/mypage', [MypageController::class, 'index']);
+   Route::post('/mypage/reserve/delete', [MypageController::class, 'delete']);
 
    Route::post('/detail/:shop_id/reserve', [ShopController::class, 'create']);
 });

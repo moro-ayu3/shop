@@ -7,6 +7,7 @@ use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
 use App\Models\Reserve;
+use App\Models\Test;
 
 
 class ShopController extends Controller
@@ -42,5 +43,19 @@ class ShopController extends Controller
         $reserve = $request->only(['date', 'time', 'number']);
         Reserve::create($reserve);
         return view('done', ['reserve' => $reserve]);
+    }
+
+    public function add(Request $request)
+    {
+        $test = $request->only(['score']);
+        Test::create($test);
+        return redirect('/');
+    }
+
+    public function delete()
+    {
+        Test::where('score', $test)->delete();
+
+        return redirect('/');
     }
 }
