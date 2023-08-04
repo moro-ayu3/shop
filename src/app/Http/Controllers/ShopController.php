@@ -12,7 +12,7 @@ use App\Models\Test;
 
 class ShopController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $shops = Shop::with('Area')->get();
         $shops = Shop::with('Genre')->get();
