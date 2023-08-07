@@ -19,4 +19,7 @@ Route::middleware('auth')->group(function () {
    Route::post('/mypage/reserve/delete', [MypageController::class, 'delete']);
 
    Route::post('/detail/:shop_id/reserve', [ShopController::class, 'create']);
+
+   Route::post('/all/score', [ShopController::class, 'add']);
+   Route::post('/all/score/delete', [ShopController::class, 'delete']);
 });

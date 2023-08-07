@@ -40,13 +40,15 @@ class ShopController extends Controller
 
     public function create(Request $request)
     {
+        $user = Auth::user();
         $reserve = $request->only(['date', 'time', 'number']);
         Reserve::create($reserve);
-        return view('done', ['reserve' => $reserve]);
+        return view('done', ['reserve' => $reserve, 'user' => $user]);
     }
 
     public function add(Request $request)
     {
+        $user = Auth::user();
         $test = $request->only(['score']);
         Test::create($test);
         return redirect('/');
@@ -54,6 +56,7 @@ class ShopController extends Controller
 
     public function delete()
     {
+        $user = Auth::user();
         Test::where('score', $test)->delete();
 
         return redirect('/');
